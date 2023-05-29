@@ -6,6 +6,7 @@ import compression from 'compression';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import mongodb from 'mongodb';
+import router from './router';
 
 const app = express();
 
@@ -28,3 +29,5 @@ const MONGO_URL = 'mongodb+srv://keung:keung@cluster0.q9fyrnx.mongodb.net/?retry
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
 mongoose.connection.on('error', (error: Error) => console.log(error));
+
+app.use('/',router());
