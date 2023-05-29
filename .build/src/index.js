@@ -34,7 +34,7 @@ const server = import_http.default.createServer(app);
 server.listen(8080, () => {
   console.log("Server running on http://localhost:8080/");
 });
-const MONGO_URL = "mongodb+srv://keung123654:keung123654@cluster0.x8ugfjo.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = "mongodb+srv://keung:keung@cluster0.q9fyrnx.mongodb.net/?retryWrites=true&w=majority";
 import_mongoose.default.Promise = Promise;
 import_mongoose.default.connect(MONGO_URL);
 import_mongoose.default.connection.on("error", (error) => console.log(error));
